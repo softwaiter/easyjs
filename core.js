@@ -2,7 +2,7 @@ if (!ejs) {
     /**
      * @namespace
      * @version 1.0.0
-     * @description EasyJs¿â»ù±¾Àà
+     * @description EasyJsåº“åŸºæœ¬ç±»
      */
     var ejs = {
         version: '1.0.0',
@@ -11,9 +11,9 @@ if (!ejs) {
         /**
         * @static
         * @function
-        * @description Ê¹ÓÃÔ­ĞÍ£¨prototype£©·½Ê½ÊµÏÖJavascriptÀàÖ®¼äµÄ¼Ì³Ğ¹ØÏµ£¬Ê¹ÓÃ´Ë·½Ê½»áÔÚ´´½¨ĞÂµÄÊµÀıÊ±¼ÌĞø±£³Ö¼Ì³ĞÀ´µÄÊôĞÔºÍ·½·¨¡£
-        * @param subClass ×ÓÀà
-        * @param superClass ¸¸Àà
+        * @description ä½¿ç”¨åŸå‹ï¼ˆprototypeï¼‰æ–¹å¼å®ç°Javascriptç±»ä¹‹é—´çš„ç»§æ‰¿å…³ç³»ï¼Œä½¿ç”¨æ­¤æ–¹å¼ä¼šåœ¨åˆ›å»ºæ–°çš„å®ä¾‹æ—¶ç»§ç»­ä¿æŒç»§æ‰¿æ¥çš„å±æ€§å’Œæ–¹æ³•ã€‚
+        * @param subClass å­ç±»
+        * @param superClass çˆ¶ç±»
         */
         inherit: function (subClass, superClass) {
             var scp = superClass.prototype;
@@ -33,10 +33,10 @@ if (!ejs) {
         /**
         * @static
         * @function
-        * @description ¶ÔÖ¸¶¨¶ÔÏóÊµÀı½øĞĞÊôĞÔºÍ·½·¨µÄÀ©Õ¹£¬Í¨³£×÷ÓÃÓÚ¶ÔÏóÊµÀı£¬²»»áÔÚ´´½¨ĞÂÊµÀıÊ±±£³ÖÀ©Õ¹µÄÄÚÈİ¡£
-        * @param target ½«±»À©Õ¹µÄ¶ÔÏóÊµÀı
-        * @param overrided ÊÇ·ñ¸²¸ÇÒÑÓĞµÄÊôĞÔ»ò·½·¨£¬true/false
-        * @param µÚ3¡«N¸ö²ÎÊı À©Õ¹ÊôĞÔºÍ·½·¨µÄÀ´Ô´¶ÔÏó£¬¿ÉÒÔ1¸ö»ò¶à¸ö
+        * @description å¯¹æŒ‡å®šå¯¹è±¡å®ä¾‹è¿›è¡Œå±æ€§å’Œæ–¹æ³•çš„æ‰©å±•ï¼Œé€šå¸¸ä½œç”¨äºå¯¹è±¡å®ä¾‹ï¼Œä¸ä¼šåœ¨åˆ›å»ºæ–°å®ä¾‹æ—¶ä¿æŒæ‰©å±•çš„å†…å®¹ã€‚
+        * @param target å°†è¢«æ‰©å±•çš„å¯¹è±¡å®ä¾‹
+        * @param overrided æ˜¯å¦è¦†ç›–å·²æœ‰çš„å±æ€§æˆ–æ–¹æ³•ï¼Œtrue/false
+        * @param ç¬¬3ï½Nä¸ªå‚æ•° æ‰©å±•å±æ€§å’Œæ–¹æ³•çš„æ¥æºå¯¹è±¡ï¼Œå¯ä»¥1ä¸ªæˆ–å¤šä¸ª
         */
         extend: function (target, overried) {
             if (typeof (overried) != "boolean") {
@@ -64,11 +64,11 @@ if (!ejs) {
 	/**
 	* @static
 	* @function
-	* @description À©Õ¹setTimeoutÄÜÁ¦£¬¿ÉÒÔ¶¯Ì¬Ö¸¶¨funcÖ´ĞĞÊ±µÄthisÖ¸Õë
-	* @param func ½«±»Ö´ĞĞµÄº¯Êı
-	* @param delay ÑÓ³ÙÖ´ĞĞµÄÊ±¼ä
-	* @param µÚ3¸ö²ÎÊı funcº¯ÊıÖ´ĞĞÊ±µÄthisÖ¸Õë
-	* @param µÚ4¡«N¸ö²ÎÊı funcº¯ÊıÖ´ĞĞÊ±²ÎÊı
+	* @description æ‰©å±•setTimeoutèƒ½åŠ›ï¼Œå¯ä»¥åŠ¨æ€æŒ‡å®šfuncæ‰§è¡Œæ—¶çš„thisæŒ‡é’ˆ
+	* @param func å°†è¢«æ‰§è¡Œçš„å‡½æ•°
+	* @param delay å»¶è¿Ÿæ‰§è¡Œçš„æ—¶é—´
+	* @param ç¬¬3ä¸ªå‚æ•° funcå‡½æ•°æ‰§è¡Œæ—¶çš„thisæŒ‡é’ˆ
+	* @param ç¬¬4ï½Nä¸ªå‚æ•° funcå‡½æ•°æ‰§è¡Œæ—¶å‚æ•°
 	*/
     var setTimeout2 = window.setTimeout;
     window.setTimeout = function (func, delay) {

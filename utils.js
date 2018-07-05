@@ -1,24 +1,28 @@
 if (!ejs.utils) {
     /**
      * @namespace
-     * @description ³£ÓÃ·½·¨
+     * @description å¸¸ç”¨æ–¹æ³•
      * @requires core.js
      */
     ejs.utils = {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎªnull
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿Îªnull£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºnull
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡ä¸ºnullï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isNull: function (obj) {
             return obj == null;
         },
 
-        /*
-        * ÅĞ¶Ï²ÎÊıÊÇ·ñÎªÈÕÆÚĞÍ
-        */
+        /**
+         * @static
+         * @function
+         * @description åˆ¤æ–­å‚æ•°æ˜¯å¦ä¸ºæ—¥æœŸå‹
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡ä¸ºæ—¥æœŸç±»å‹ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
+         */
         isDate: function (obj) {
             return this.isObject(obj) && this.isFunction(obj.getDate);
         },
@@ -26,9 +30,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎ´¶¨Òå
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿Î´¶¨Òå£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦æœªå®šä¹‰
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡æœªå®šä¹‰ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isUndefined: function (obj) {
             return typeof (obj) == "undefined";
@@ -37,9 +41,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎªnull»òÕßÎ´¶¨Òå
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿Îªnull»òÕßÎ´¶¨Òå£¬·µ»Øture£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºnullæˆ–è€…æœªå®šä¹‰
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡ä¸ºnullæˆ–è€…æœªå®šä¹‰ï¼Œè¿”å›tureï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isNullOrUndefined: function (obj) {
             return this.isNull(obj) || this.isUndefined(obj);
@@ -48,9 +52,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎª×Ö·û´®ÀàĞÍ
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿ÊÇ×Ö·û´®ÀàĞÍ£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºå­—ç¬¦ä¸²ç±»å‹
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡æ˜¯å­—ç¬¦ä¸²ç±»å‹ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isString: function (obj) {
             return typeof (obj) == "string";
@@ -59,9 +63,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎªÊıÖµĞÍ
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿ÊÇÊıÖµ£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºæ•°å€¼å‹
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡æ˜¯æ•°å€¼ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isNumber: function (obj) {
             return typeof (obj) == "number" && isFinite(obj);
@@ -70,9 +74,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎªÕûÊıĞÍ
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿ÊÇÕûÊı£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºæ•´æ•°å‹
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡æ˜¯æ•´æ•°ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isInt: function (obj) {
             if (this.isNumber(obj)) {
@@ -84,9 +88,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÎªÒ»¸ö²¼¶ûÖµ£¬ture/false
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿ÊÇÒ»¸ö²¼¶ûÖµ£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦ä¸ºä¸€ä¸ªå¸ƒå°”å€¼ï¼Œture/false
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡æ˜¯ä¸€ä¸ªå¸ƒå°”å€¼ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isBoolean: function (obj) {
             return typeof (obj) == "boolean";
@@ -95,9 +99,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÊÇÒ»¸öº¯Êı
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns Èç¹û±äÁ¿ÊÇÒ»¸öº¯Êı£¬·µ»Øture£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦æ˜¯ä¸€ä¸ªå‡½æ•°
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å¦‚æœå˜é‡æ˜¯ä¸€ä¸ªå‡½æ•°ï¼Œè¿”å›tureï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isFunction: function (obj) {
             return (typeof (obj) == "function") || ejs.string.startsWith(ejs.string.trim("" + obj), "function", true);
@@ -110,9 +114,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï±äÁ¿ÊÇ·ñÊÇÒ»¸öÊı×é
-         * @param obj ÒªÅĞ¶ÏµÄ±äÁ¿
-         * @returns ±äÁ¿ÎªÒ»¸öÊı×é£¬·µ»Øture£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å˜é‡æ˜¯å¦æ˜¯ä¸€ä¸ªæ•°ç»„
+         * @param obj è¦åˆ¤æ–­çš„å˜é‡
+         * @returns å˜é‡ä¸ºä¸€ä¸ªæ•°ç»„ï¼Œè¿”å›tureï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isArray: function (obj) {
             if (obj) {
@@ -124,9 +128,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description Éú³ÉËæ»úÊı
-         * @param length Ö¸¶¨Éú³ÉËæ»úµÄ³¤¶È
-         * @returns ·µ»ØÉú³ÉºÃµÄËæ»úÊı
+         * @description ç”Ÿæˆéšæœºæ•°
+         * @param length æŒ‡å®šç”Ÿæˆéšæœºçš„é•¿åº¦
+         * @returns è¿”å›ç”Ÿæˆå¥½çš„éšæœºæ•°
          */
         makeRandom: function (length) {
             var r = Math.random();
@@ -149,9 +153,9 @@ if (!ejs.utils) {
         /**
          * @static
          * @function
-         * @description »ñÈ¡º¯ÊıÃû³Æ
-         * @param func º¯Êı¶ÔÏó
-         * @returns º¯ÊıÃû³Æ
+         * @description è·å–å‡½æ•°åç§°
+         * @param func å‡½æ•°å¯¹è±¡
+         * @returns å‡½æ•°åç§°
          */
         getFuncName: function (func) {
             var funcBody = func.toString();

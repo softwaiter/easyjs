@@ -1,16 +1,16 @@
 if (!ejs.string) {
     /**
     * @namespace
-    * @description ×Ö·û´®·½·¨
+    * @description å­—ç¬¦ä¸²æ–¹æ³•
     * @requires core.js, utils.js
     */
     ejs.string = {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
-         * @param text ½«±»ÅĞ¶ÏµÄ×Ö·û´®
-         * @returns ×Ö·û´®Îª¿Õ»ònull£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
+         * @param text å°†è¢«åˆ¤æ–­çš„å­—ç¬¦ä¸²
+         * @returns å­—ç¬¦ä¸²ä¸ºç©ºæˆ–nullï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isNullOrEmpty: function (text) {
             if (ejs.utils.isNull(text)) {
@@ -24,9 +24,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ¼ÆËãÖ¸¶¨×Ö·û´®µÄ³¤¶È
-         * @param text ½«±»¼ÆËã³¤¶ÈµÄ×Ö·û´®
-         * @returns ·µ»Ø×Ö·û´®µÄ³¤¶ÈÊıÖµ
+         * @description è®¡ç®—æŒ‡å®šå­—ç¬¦ä¸²çš„é•¿åº¦
+         * @param text å°†è¢«è®¡ç®—é•¿åº¦çš„å­—ç¬¦ä¸²
+         * @returns è¿”å›å­—ç¬¦ä¸²çš„é•¿åº¦æ•°å€¼
          */
         length: function (text) {
             if (ejs.utils.isNullOrUndefined(text)) {
@@ -42,8 +42,8 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description Á¬½Ó¶à¸ö×Ö·û´®£»²ÎÊıÎªÈÎÒâ¸öÊıµÄ×Ö·û´®
-         * @returns ·µ»ØÁ¬½ÓºÃµÄĞÂ×Ö·û´®
+         * @description è¿æ¥å¤šä¸ªå­—ç¬¦ä¸²ï¼›å‚æ•°ä¸ºä»»æ„ä¸ªæ•°çš„å­—ç¬¦ä¸²
+         * @returns è¿”å›è¿æ¥å¥½çš„æ–°å­—ç¬¦ä¸²
          */
         concat: function () {
             var result = [];
@@ -58,10 +58,10 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ¸ñÊ½»¯×Ö·û´®£¬½«ºóĞø²ÎÊı°´ĞòºÅÌîÈëÖ¸¶¨Î»ÖÃ
-         * @param text Òª¸ñÊ½»¯µÄ×Ö·û´®
-         * @param µÚ2¡«N¸ö²ÎÊı ½«±»ÌîÈëµÄ1¸ö»ò¶à¸ö×Ö·û´®
-         * @returns ·µ»Ø¸ñÊ½»¯³É¹¦µÄĞÂ×Ö·û´®
+         * @description æ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼Œå°†åç»­å‚æ•°æŒ‰åºå·å¡«å…¥æŒ‡å®šä½ç½®
+         * @param text è¦æ ¼å¼åŒ–çš„å­—ç¬¦ä¸²
+         * @param ç¬¬2ï½Nä¸ªå‚æ•° å°†è¢«å¡«å…¥çš„1ä¸ªæˆ–å¤šä¸ªå­—ç¬¦ä¸²
+         * @returns è¿”å›æ ¼å¼åŒ–æˆåŠŸçš„æ–°å­—ç¬¦ä¸²
          */
         format: function (text) {
             if (ejs.utils.isString(text)) {
@@ -77,11 +77,11 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï×Ö·û´®ÊÇ·ñ·ûºÏÖ¸¶¨ÕıÔò±í´ïÊ½
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @param regex ÕıÔò±í´ïÊ½ÄÚÈİ
-         * @param ÕıÔò±í´ïÊ½²ÎÊı£»g-È«ÎÄ²éÕÒ£¬i-ºöÂÔ´óĞ¡Ğ´£¬m-¶àĞĞ²éÕÒ
-         * @returns ·µ»ØÅĞ¶Ï½á¹û£¬³É¹¦·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ç¬¦åˆæŒ‡å®šæ­£åˆ™è¡¨è¾¾å¼
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @param regex æ­£åˆ™è¡¨è¾¾å¼å†…å®¹
+         * @param æ­£åˆ™è¡¨è¾¾å¼å‚æ•°ï¼›g-å…¨æ–‡æŸ¥æ‰¾ï¼Œi-å¿½ç•¥å¤§å°å†™ï¼Œm-å¤šè¡ŒæŸ¥æ‰¾
+         * @returns è¿”å›åˆ¤æ–­ç»“æœï¼ŒæˆåŠŸè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         isMatch: function (text, regex, options) {
             if (ejs.utils.isString(text) && ejs.utils.isString(regex)) {
@@ -94,11 +94,11 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔÖ¸¶¨Ç°×º¿ªÊ¼
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @param startText Ç°×ºÄÚÈİ
-         * @param ignoreCase ÊÇ·ñºöÂÔ´óĞ¡Ğ´£¬true/false£»Ä¬ÈÏfalse
-         * @returns Èç¹ûtextÊÇÒÔstartText¿ªÊ¼£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥æŒ‡å®šå‰ç¼€å¼€å§‹
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @param startText å‰ç¼€å†…å®¹
+         * @param ignoreCase æ˜¯å¦å¿½ç•¥å¤§å°å†™ï¼Œtrue/falseï¼›é»˜è®¤false
+         * @returns å¦‚æœtextæ˜¯ä»¥startTextå¼€å§‹ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         startsWith: function (text, startText, ignoreCase) {
             if (ejs.utils.isString(text) && ejs.utils.isString(startText)) {
@@ -125,11 +125,11 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔÖ¸¶¨ºó×º½áÊø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @param endText ºó×ºÄÚÈİ
-         * @param ignoreCase ÊÇ·ñºöÂÔ´óĞ¡Ğ´£¬true/false£»Ä¬ÈÏfalse
-         * @returns Èç¹ûtextÊÇÒÔstartText½áÊø£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥æŒ‡å®šåç¼€ç»“æŸ
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @param endText åç¼€å†…å®¹
+         * @param ignoreCase æ˜¯å¦å¿½ç•¥å¤§å°å†™ï¼Œtrue/falseï¼›é»˜è®¤false
+         * @returns å¦‚æœtextæ˜¯ä»¥startTextç»“æŸï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         endsWith: function (text, endText, ignoreCase) {
             if (ejs.utils.isString(text) && ejs.utils.isString(endText)) {
@@ -154,11 +154,11 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶Ï×Ö·û´®ÖĞÊÇ·ñ°üº¬Ö¸¶¨×Ó×Ö·û´®
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @param subText ×Ó×Ö·û´®ÄÚÈİ
-         * @param ignoreCase ÊÇ·ñºöÂÔ´óĞ¡Ğ´£¬true/false£»Ä¬ÈÏfalse
-         * @returns ·µ»ØÅĞ¶Ï½á¹û£¬Èç¹ûtext×Ö·û´®ÖĞ°üº¬subText×Ö·û´®£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­å­—ç¬¦ä¸²ä¸­æ˜¯å¦åŒ…å«æŒ‡å®šå­å­—ç¬¦ä¸²
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @param subText å­å­—ç¬¦ä¸²å†…å®¹
+         * @param ignoreCase æ˜¯å¦å¿½ç•¥å¤§å°å†™ï¼Œtrue/falseï¼›é»˜è®¤false
+         * @returns è¿”å›åˆ¤æ–­ç»“æœï¼Œå¦‚æœtextå­—ç¬¦ä¸²ä¸­åŒ…å«subTextå­—ç¬¦ä¸²ï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         contains: function (text, subText, ignoreCase) {
             if (ejs.utils.isString(text) && ejs.utils.isString(subText)) {
@@ -170,7 +170,7 @@ if (!ejs.string) {
                 }
 
                 /*
-                * TODO Ó¦¸Ã²»ÓÃ×ª»»£¬²ÎÊı×Ô¶¯´øµÄ
+                * TODO åº”è¯¥ä¸ç”¨è½¬æ¢ï¼Œå‚æ•°è‡ªåŠ¨å¸¦çš„
                 */
 
                 subText = subText.replace("?", "\\?");
@@ -202,11 +202,11 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÅĞ¶ÏÁ½¸ö×Ö·û´®ÄÚÈİÊÇ·ñÒ»ÖÂ
-         * @param text1 ×Ö·û´®1
-         * @param text2 ×Ö·û´®2
-         * @param ignoreCase ÊÇ·ñºöÂÔ´óĞ¡Ğ´£¬true/false£»Ä¬ÈÏfalse
-         * @returns ·µ»ØÅĞ¶Ï½á¹û£¬Á½¸ö×Ö·û´®ÍêÈ«ÏàÍ¬£¬·µ»Øtrue£»·ñÔò£¬·µ»Øfalse
+         * @description åˆ¤æ–­ä¸¤ä¸ªå­—ç¬¦ä¸²å†…å®¹æ˜¯å¦ä¸€è‡´
+         * @param text1 å­—ç¬¦ä¸²1
+         * @param text2 å­—ç¬¦ä¸²2
+         * @param ignoreCase æ˜¯å¦å¿½ç•¥å¤§å°å†™ï¼Œtrue/falseï¼›é»˜è®¤false
+         * @returns è¿”å›åˆ¤æ–­ç»“æœï¼Œä¸¤ä¸ªå­—ç¬¦ä¸²å®Œå…¨ç›¸åŒï¼Œè¿”å›trueï¼›å¦åˆ™ï¼Œè¿”å›false
          */
         equals: function (text1, text2, ignoreCase) {
             if (ejs.utils.isNull(text1)) {
@@ -237,9 +237,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÒÆ³ı×Ö·û´®×ó²à¿Õ°××Ö·û²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»ØÈ¥³ı×î×ó²à¿Õ¸ñºóµÄĞÂ×Ö·û´®
+         * @description ç§»é™¤å­—ç¬¦ä¸²å·¦ä¾§ç©ºç™½å­—ç¬¦å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›å»é™¤æœ€å·¦ä¾§ç©ºæ ¼åçš„æ–°å­—ç¬¦ä¸²
          */
         leftTrim: function (text) {
             return (text || "").replace(/^\s+/g, "");
@@ -248,9 +248,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÒÆ³ı×Ö·û´®ÓÒ²à¿Õ°××Ö·û²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»ØÈ¥³ı×îÓÒ²à¿Õ¸ñºóµÄĞÂ×Ö·û´®
+         * @description ç§»é™¤å­—ç¬¦ä¸²å³ä¾§ç©ºç™½å­—ç¬¦å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›å»é™¤æœ€å³ä¾§ç©ºæ ¼åçš„æ–°å­—ç¬¦ä¸²
          */
         rightTrim: function (text) {
             return (text || "").replace(/\s+$/g, "");
@@ -259,9 +259,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ÒÆ³ı×Ö·û´®Á½²àµÄ¿Õ°××Ö·û²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»ØÈ¥³ıÁ½²à¿Õ¸ñºóµÄĞÂ×Ö·û´®
+         * @description ç§»é™¤å­—ç¬¦ä¸²ä¸¤ä¾§çš„ç©ºç™½å­—ç¬¦å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›å»é™¤ä¸¤ä¾§ç©ºæ ¼åçš„æ–°å­—ç¬¦ä¸²
          */
         trim: function (text) {
             return (text || "").replace(/(^\s+)|(\s+$)/g, "");
@@ -270,9 +270,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ½«×Ö·û´®×ª»»Îª²¼¶ûÀàĞÍ²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»Ø×ª»»ºóµÄ²¼¶ûÖµ
+         * @description å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºå¸ƒå°”ç±»å‹å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›è½¬æ¢åçš„å¸ƒå°”å€¼
          */
         toBoolean: function (text) {
             if (ejs.utils.isString(text)) {
@@ -288,10 +288,10 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ½«×Ö·û´®×ª»»ÎªÕûĞÍ²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @param radix Ö¸¶¨×ª»»µÄ»ùÊı£¨2-36£©£¬Ä¬ÈÏÎª10
-         * @returns ·µ»Ø×ª»»ºóµÄÕûÊıÖµ
+         * @description å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•´å‹å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @param radix æŒ‡å®šè½¬æ¢çš„åŸºæ•°ï¼ˆ2-36ï¼‰ï¼Œé»˜è®¤ä¸º10
+         * @returns è¿”å›è½¬æ¢åçš„æ•´æ•°å€¼
          */
         toInt: function (text, radix) {
             var realTetx = text || "";
@@ -301,9 +301,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ½«×Ö·û´®×ª»»Îª¸¡µãĞÍ²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»Ø×ª»»ºóµÄ¸¡µãÊı
+         * @description å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæµ®ç‚¹å‹å¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›è½¬æ¢åçš„æµ®ç‚¹æ•°
          */
         toFloat: function (text) {
             var realText = text || "";
@@ -313,9 +313,9 @@ if (!ejs.string) {
         /**
          * @static
          * @function
-         * @description ½«×Ö·û´®×ª»»ÎªÈÕÆÚ²¢·µ»Ø
-         * @param text ×Ö·û´®ÄÚÈİ
-         * @returns ·µ»Ø×ª»»ºóµÄÈÕÆÚÊ±¼äÖµ
+         * @description å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ—¥æœŸå¹¶è¿”å›
+         * @param text å­—ç¬¦ä¸²å†…å®¹
+         * @returns è¿”å›è½¬æ¢åçš„æ—¥æœŸæ—¶é—´å€¼
          */
         toDateTime: function (text) {
             var value = text;

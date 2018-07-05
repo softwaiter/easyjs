@@ -9,7 +9,15 @@ if (!ejs.browser) {
                 var ua = navigator.userAgent.toLowerCase();
                 this._isIE = ua.indexOf("compatible") > -1 &&
 				    ua.indexOf("msie") > -1 &&
-				    !(ua.indexOf("opera") > -1);
+                    !(ua.indexOf("opera") > -1);
+
+                if (!this._isIE) {
+                    this._isIE = ua.indexOf('trident') > -1 && 
+                        ua.indexOf("rv:11.0") > -1;
+                    if (!this._isIE) {
+                        this._isIE = ua.indexOf("edge") > -1;
+                    }
+                }
             }
             return this._isIE;
         },
@@ -37,7 +45,9 @@ if (!ejs.browser) {
 
         getIEVer: function () {
             if (navigator.appName == "Microsoft Internet Explorer") {
-                if (navigator.appVersion.match(/MSIE 9.0/i) == 'MSIE 9.0') {
+                if (navigator.appVersion.match(/MSIE 9.0/i) == 'MSIE 10.0') {
+                    return 10;
+                } else if (navigator.appVersion.match(/MSIE 9.0/i) == 'MSIE 9.0') {
                     return 9;
                 } else if (navigator.appVersion.match(/MSIE 8.0/i) == 'MSIE 8.0') {
                     return 8;
@@ -45,6 +55,13 @@ if (!ejs.browser) {
                     return 7;
                 } else if (navigator.appVersion.match(/MSIE 6.0/i) == 'MSIE 6.0') {
                     return 6;
+                } else {
+                    var ua = navigator.userAgent.toLowerCase();
+                    if (ua.indexOf('trident') > -1 && ua.indexOf("rv:11.0") > -1) {
+                        return 11;
+                    } else if (ua.indexOf("edge") > -1) {
+                        return "edge";
+                    }
                 }
             }
             return 0;

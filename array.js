@@ -1,4 +1,4 @@
-﻿if (!ejs.array) {
+if (!ejs.array) {
     /**
      * @namespace
      * @description 数组相关方法

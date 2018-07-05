@@ -21,8 +21,8 @@ if (!ejs.element) {
 
     ejs.element = {
         /*
-        * ¸ù¾İidÖµ»ñµÃ¶ÔÓ¦ÔªËØ
-        * id: ÔªËØ»òÔªËØid
+        * æ ¹æ®idå€¼è·å¾—å¯¹åº”å…ƒç´ 
+        * id: å…ƒç´ æˆ–å…ƒç´ id
         */
         getElement: function (id) {
             return (typeof (id) === "string") ? document.getElementById(id) : id;
@@ -47,7 +47,7 @@ if (!ejs.element) {
                     var prevDisplay = element.prevDisplay;
                     if (ejs.utils.isNullOrUndefined(prevDisplay)) {
                         /*
-                        TODO ´Ë´¦µ½µ×ÊÇÓÃinline »¹ÊÇinline-block£¬²Ù£¬²»½â£¬shit£¬»¹ÊÇÏÈÓÃblock°É£¬Ã»ÓĞ¿í¶È¾Í100%£¬ÓĞ¾Í°´¿í¶È
+                        TODO æ­¤å¤„åˆ°åº•æ˜¯ç”¨inline è¿˜æ˜¯inline-blockï¼Œæ“ï¼Œä¸è§£ï¼Œshitï¼Œè¿˜æ˜¯å…ˆç”¨blockå§ï¼Œæ²¡æœ‰å®½åº¦å°±100%ï¼Œæœ‰å°±æŒ‰å®½åº¦
                         */
                         prevDisplay = "block";
                     }
@@ -57,8 +57,8 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅĞ¶ÏÔªËØÊÇ·ñÎªÒ³Ãæ¸ùÔªËØ
-        * element: ÒªÅĞ¶ÏµÄÔªËØ»òÔªËØid
+        * åˆ¤æ–­å…ƒç´ æ˜¯å¦ä¸ºé¡µé¢æ ¹å…ƒç´ 
+        * element: è¦åˆ¤æ–­çš„å…ƒç´ æˆ–å…ƒç´ id
         */
         isBody: function (element) {
             element = this.getElement(element);
@@ -69,9 +69,9 @@ if (!ejs.element) {
         },
 
         /*
-        * É¾³ıÖ¸¶¨ÔªËØ
-        * element: ÒªÉ¾³ıµÄÔªËØ»òÔªËØid
-        * really: ÊÇ·ñ³¹µ×É¾³ıÔªËØ£¬Ä¬ÈÏ²»ÊÇ
+        * åˆ é™¤æŒ‡å®šå…ƒç´ 
+        * element: è¦åˆ é™¤çš„å…ƒç´ æˆ–å…ƒç´ id
+        * really: æ˜¯å¦å½»åº•åˆ é™¤å…ƒç´ ï¼Œé»˜è®¤ä¸æ˜¯
         */
         remove: function (element, really) {
             var element = this.getElement(element);
@@ -94,9 +94,9 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄµÄÖ¸¶¨cssÊôĞÔÖµ
-        * element: ÔªËØ»òÔªËØid
-        * property: cssÊôĞÔÃû
+        * è·å¾—å…ƒç´ çš„çš„æŒ‡å®šcsså±æ€§å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * property: csså±æ€§å
         */
         getCssValue: function (element, property) {
             element = this.getElement(element);
@@ -125,8 +125,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÖ¸¶¨ÔªËØµÄ¸¸ÔªËØ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—æŒ‡å®šå…ƒç´ çš„çˆ¶å…ƒç´ 
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getParent: function (element) {
             element = this.getElement(element);
@@ -136,7 +136,7 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅĞ¶Ïä¯ÀÀÆ÷ÊÇ·ñÖ§³Ö²åÈë¿Õ½Úµã
+        * åˆ¤æ–­æµè§ˆå™¨æ˜¯å¦æ”¯æŒæ’å…¥ç©ºèŠ‚ç‚¹
         */
         supportsContainsTextNode: function () {
             var result = false;
@@ -150,9 +150,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅĞ¶ÏÔªËØ2ÊÇ·ñÔªËØ1µÄ×ÓÔªËØ
-        * element1: ÔªËØ1»òÔªËØ1id
-        * element2: ÔªËØ2»òÔªËØ2id
+        * åˆ¤æ–­å…ƒç´ 2æ˜¯å¦å…ƒç´ 1çš„å­å…ƒç´ 
+        * element1: å…ƒç´ 1æˆ–å…ƒç´ 1id
+        * element2: å…ƒç´ 2æˆ–å…ƒç´ 2id
         */
         contains: function (element, child) {
             var result = false;
@@ -180,8 +180,8 @@ if (!ejs.element) {
         },
 
         /*
-        * ·µ»ØÖ¸¶¨ÔªËØµÄ×ÓÔªËØ¸öÊı
-        * element: ÔªËØ»òÔªËØid
+        * è¿”å›æŒ‡å®šå…ƒç´ çš„å­å…ƒç´ ä¸ªæ•°
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getChildCount: function (element) {
             element = this.getElement(element);
@@ -194,9 +194,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ·µ»ØÔªËØµÄÖ¸¶¨×ÓÔªËØ
-        * element: ÔªËØ»òÔªËØid
-        * index: ×ÓÔªËØË÷ÒıÖµ
+        * è¿”å›å…ƒç´ çš„æŒ‡å®šå­å…ƒç´ 
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * index: å­å…ƒç´ ç´¢å¼•å€¼
         */
         getChild: function (element, index) {
             element = this.getElement(element);
@@ -211,16 +211,16 @@ if (!ejs.element) {
         },
 
         /*
-        * ·µ»ØÖ¸¶¨ÔªËØµÄµÚ1¸ö×ÓÔªËØ
-        * element: ÔªËØ»òÔªËØid
+        * è¿”å›æŒ‡å®šå…ƒç´ çš„ç¬¬1ä¸ªå­å…ƒç´ 
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getFirstChild: function (element) {
             return this.getChild(element, 0);
         },
 
         /*
-        * ·µ»ØÖ¸¶¨ÔªËØµÄ×îºóÒ»¸ö×ÓÔªËØ
-        * element: ÔªËØ»òÔªËØid
+        * è¿”å›æŒ‡å®šå…ƒç´ çš„æœ€åä¸€ä¸ªå­å…ƒç´ 
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getLastChild: function (element) {
             var count = this.getChildCount(element);
@@ -228,8 +228,8 @@ if (!ejs.element) {
         },
 
         /*
-        * µÃµ½Ö¸¶¨½ÚµãµÄÏÂÒ»¸öĞÖµÜ½Úµã
-        * element: ÔªËØ»òÔªËØid
+        * å¾—åˆ°æŒ‡å®šèŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªå…„å¼ŸèŠ‚ç‚¹
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getNextSibling: function (element) {
             element = this.getElement(element);
@@ -241,8 +241,8 @@ if (!ejs.element) {
         },
 
         /*
-        * µÃµ½Ö¸¶¨½ÚµãµÄÉÏÒ»¸öĞÖµÜ½Úµã
-        * element: ÔªËØ»òÔªËØid
+        * å¾—åˆ°æŒ‡å®šèŠ‚ç‚¹çš„ä¸Šä¸€ä¸ªå…„å¼ŸèŠ‚ç‚¹
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getPrevSibling: function (element) {
             element = this.getElement(element);
@@ -254,8 +254,8 @@ if (!ejs.element) {
         },
 
         /*
-        * ·µ»ØÖ¸¶¨ÔªËØµÄÎÄ±¾ÄÚÈİ
-        * element: ÔªËØ»òÔªËØid
+        * è¿”å›æŒ‡å®šå…ƒç´ çš„æ–‡æœ¬å†…å®¹
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getText: function (element) {
             element = this.getElement(element);
@@ -272,9 +272,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÉèÖÃÔªËØµÄÎÄ±¾ÄÚÈİ
-        * element: ÔªËØ»òÔªËØid
-        * value: ´ıÉèÖÃÎÄ±¾ÄÚÈİ
+        * è®¾ç½®å…ƒç´ çš„æ–‡æœ¬å†…å®¹
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * value: å¾…è®¾ç½®æ–‡æœ¬å†…å®¹
         */
         setText: function (element, value) {
             element = this.getElement(element);
@@ -291,9 +291,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅĞ¶ÏÔªËØÊÇ·ñÓµÓĞÖ¸¶¨cssÀà
-        * element: ÔªËØ»òÔªËØid
-        * className: cssÀàÃû³Æ
+        * åˆ¤æ–­å…ƒç´ æ˜¯å¦æ‹¥æœ‰æŒ‡å®šcssç±»
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * className: cssç±»åç§°
         */
         hasClass: function (element, className) {
             element = this.getElement(element);
@@ -306,9 +306,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÎªÔªËØÔö¼ÓÖ¸¶¨cssÀà
-        * element: ÔªËØ»òÔªËØid
-        * className: cssÀàÃû³Æ
+        * ä¸ºå…ƒç´ å¢åŠ æŒ‡å®šcssç±»
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * className: cssç±»åç§°
         */
         addClass: function (element, className) {
             element = this.getElement(element);
@@ -319,9 +319,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÒÆ³ıÔªËØÖĞµÄÖ¸¶¨cssÀà
-        * element: ÔªËØ»òÔªËØid
-        * className: cssÀàÃû³Æ
+        * ç§»é™¤å…ƒç´ ä¸­çš„æŒ‡å®šcssç±»
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * className: cssç±»åç§°
         */
         removeClass: function (element, className) {
             element = this.getElement(element);
@@ -336,9 +336,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÎªÔªËØÅúÁ¿Ôö¼ÓcssÀà£¨¹æÔòÊÇ½«ÏÖÓĞcssÀàÔö¼ÓÖ¸¶¨ºó×º¸´ÖÆÒ»·İ£©
-        * element: ÔªËØ»òÔªËØid
-        * suffix: Ö¸¶¨ºó×º
+        * ä¸ºå…ƒç´ æ‰¹é‡å¢åŠ cssç±»ï¼ˆè§„åˆ™æ˜¯å°†ç°æœ‰cssç±»å¢åŠ æŒ‡å®šåç¼€å¤åˆ¶ä¸€ä»½ï¼‰
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * suffix: æŒ‡å®šåç¼€
         */
         cloneClassWithSuffix: function (element, suffix) {
             element = this.getElement(element);
@@ -353,9 +353,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅúÁ¿ÒÆ³ıÔªËØµÄÖ¸¶¨cssÀà£¨¹æÔòÊÇÒÆ³ıÖ¸¶¨ºó×ºµÄcssÀà£©
-        * element: ÔªËØ»òÔªËØid
-        * suffix: Ö¸¶¨ºó×º
+        * æ‰¹é‡ç§»é™¤å…ƒç´ çš„æŒ‡å®šcssç±»ï¼ˆè§„åˆ™æ˜¯ç§»é™¤æŒ‡å®šåç¼€çš„cssç±»ï¼‰
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * suffix: æŒ‡å®šåç¼€
         */
         removeClassWithSuffix: function (element, suffix) {
             element = this.getElement(element);
@@ -371,9 +371,9 @@ if (!ejs.element) {
         },
 
         /*
-        * ÅĞ¶ÏÔªËØÊÇ·ñÓĞÖ¸¶¨ÊôĞÔ
-        * element: ÔªËØ»òÔªËØid
-        * attrName: ÊôĞÔÃû³Æ
+        * åˆ¤æ–­å…ƒç´ æ˜¯å¦æœ‰æŒ‡å®šå±æ€§
+        * element: å…ƒç´ æˆ–å…ƒç´ id
+        * attrName: å±æ€§åç§°
         */
         hasAttribute: function (element, attrName) {
             element = this.getElement(element);
@@ -384,10 +384,10 @@ if (!ejs.element) {
         },
 
         /*
-        * ½«Î´¾öÔªËØ°´Ö¸¶¨Ä£Ê½Ó¦ÓÃµ½Ö¸¶¨ÔªËØÉÏ
-        * element: Ö¸¶¨ÔªËØ»òÔªËØid
-        * pendingElement: Î´¾öÔªËØ»òÔªËØid
-        * mode: Ó¦ÓÃÄ£Ê½£¨inside: ×÷ÎªÖ¸¶¨ÔªËØµÄ×ÓÔªËØ, outside: ×÷ÎªÖ¸¶¨ÔªËØµÄ¸¸ÔªËØ£©
+        * å°†æœªå†³å…ƒç´ æŒ‰æŒ‡å®šæ¨¡å¼åº”ç”¨åˆ°æŒ‡å®šå…ƒç´ ä¸Š
+        * element: æŒ‡å®šå…ƒç´ æˆ–å…ƒç´ id
+        * pendingElement: æœªå†³å…ƒç´ æˆ–å…ƒç´ id
+        * mode: åº”ç”¨æ¨¡å¼ï¼ˆinside: ä½œä¸ºæŒ‡å®šå…ƒç´ çš„å­å…ƒç´ , outside: ä½œä¸ºæŒ‡å®šå…ƒç´ çš„çˆ¶å…ƒç´ ï¼‰
         */
         applyElement: function (element, pendingElement, mode) {
             element = this.getElement(element);
@@ -412,8 +412,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄ¶¥²¿±ß¾àÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„é¡¶éƒ¨è¾¹è·å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getMarginTop: function (element) {
             var strValue = this.getCssValue(element, "margin-top");
@@ -422,8 +422,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄÓÒ²à±ß¾àÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„å³ä¾§è¾¹è·å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getMarginRight: function (element) {
             var strValue = this.getCssValue(element, "margin-right");
@@ -432,8 +432,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄµ×²¿±ß¾àÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„åº•éƒ¨è¾¹è·å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getMarginBottom: function (element) {
             var strValue = this.getCssValue(element, "margin-bottom");
@@ -442,8 +442,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄ×ó²à±ß¾àÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„å·¦ä¾§è¾¹è·å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getMarginLeft: function (element) {
             var strValue = this.getCssValue(element, "margin-left");
@@ -452,8 +452,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄ¶¥²¿Ìî³äÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„é¡¶éƒ¨å¡«å……å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getPaddingTop: function (element) {
             var strValue = this.getCssValue(element, "padding-top");
@@ -462,8 +462,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄÓÒ²àÌî³äÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„å³ä¾§å¡«å……å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getPaddingRight: function (element) {
             var strValue = this.getCssValue(element, "padding-right");
@@ -472,8 +472,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄµ×²¿Ìî³äÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„åº•éƒ¨å¡«å……å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getPaddingBottom: function (element) {
             var strValue = this.getCssValue(element, "padding-bottom");
@@ -482,8 +482,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄ×ó²àÌî³äÖµ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„å·¦ä¾§å¡«å……å€¼
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getPaddingLeft: function (element) {
             var strValue = this.getCssValue(element, "padding-left");
@@ -492,8 +492,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄ¶¥²¿±ß¿ò¿í¶È
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„é¡¶éƒ¨è¾¹æ¡†å®½åº¦
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getBorderTopWidth: function (element) {
             var strValue = this.getCssValue(element, "border-top-width");
@@ -502,8 +502,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄÓÒ²à±ß¿ò¿í¶È
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„å³ä¾§è¾¹æ¡†å®½åº¦
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getBorderRightWidth: function (element) {
             var strValue = this.getCssValue(element, "border-right-width");
@@ -512,8 +512,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄµ×²¿±ß¿ò¿í¶È
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„åº•éƒ¨è¾¹æ¡†å®½åº¦
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getBorderBottomWidth: function (element) {
             var strValue = this.getCssValue(element, "border-bottom-width");
@@ -522,8 +522,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØ×ó²à±ß¿ò¿í¶È
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ å·¦ä¾§è¾¹æ¡†å®½åº¦
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getBorderLeftWidth: function (element) {
             var strValue = this.getCssValue(element, "border-left-width");
@@ -532,8 +532,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄÕûÌå¿í¶È£¬°üÀ¨±ß¿ò¿í¶ÈµÈ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„æ•´ä½“å®½åº¦ï¼ŒåŒ…æ‹¬è¾¹æ¡†å®½åº¦ç­‰
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getOuterWidth: function (element) {
             element = this.getElement(element);
@@ -545,8 +545,8 @@ if (!ejs.element) {
         },
 
         /*
-        * ÉèÖÃÔªËØÕûÌå¿í¶È£¬±ß¿ò¿í¶ÈµÈ°üº¬ÔÚÄÚ
-        * element: ÔªËØ»òÔªËØid
+        * è®¾ç½®å…ƒç´ æ•´ä½“å®½åº¦ï¼Œè¾¹æ¡†å®½åº¦ç­‰åŒ…å«åœ¨å†…
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         setOuterWidth: function (element, value) {
             element = this.getElement(element);
@@ -559,8 +559,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØµÄÕûÌå¸ß¶È£¬°üÀ¨±ß¿ò¸ß¶ÈµÈ
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ çš„æ•´ä½“é«˜åº¦ï¼ŒåŒ…æ‹¬è¾¹æ¡†é«˜åº¦ç­‰
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getOuterHeight: function (element) {
             element = this.getElement(element);
@@ -571,8 +571,8 @@ if (!ejs.element) {
         },
 
         /*
-        * ÉèÖÃÔªËØÕûÌå¸ß¶È£¬±ß¿ò¸ß¶ÈµÈ°üº¬ÔÚÄÚ
-        * element: ÔªËØ»òÔªËØid
+        * è®¾ç½®å…ƒç´ æ•´ä½“é«˜åº¦ï¼Œè¾¹æ¡†é«˜åº¦ç­‰åŒ…å«åœ¨å†…
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         setOuterHeight: function (element, value) {
             element = this.getElement(element);
@@ -753,8 +753,8 @@ if (!ejs.element) {
 
 
         /*
-        * »ñµÃÔªËØÏà¶Ô´°¿ÚµÄ¾ø¶Ô×ø±ê
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ ç›¸å¯¹çª—å£çš„ç»å¯¹åæ ‡
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getAbsolutePos: function (element, parent) {
             var offsets = this.getOffset(element);
@@ -770,8 +770,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØÏà¶Ô´°¿ÚµÄ¾ø¶ÔË®Æ½×ø±ê
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ ç›¸å¯¹çª—å£çš„ç»å¯¹æ°´å¹³åæ ‡
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getAbsoluteLeft: function (element, parent) {
             var pos = this.getAbsolutePos(element, parent);
@@ -779,8 +779,8 @@ if (!ejs.element) {
         },
 
         /*
-        * »ñµÃÔªËØÏà¶Ô´°¿ÚµÄ¾ø¶Ô´¹Ö±×ø±ê
-        * element: ÔªËØ»òÔªËØid
+        * è·å¾—å…ƒç´ ç›¸å¯¹çª—å£çš„ç»å¯¹å‚ç›´åæ ‡
+        * element: å…ƒç´ æˆ–å…ƒç´ id
         */
         getAbsoluteTop: function (element, parent) {
             var pos = this.getAbsolutePos(element, parent);

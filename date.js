@@ -1,7 +1,6 @@
 /*
  *	Date Class
  *
- *	Required: date.js
  */
 if (!ejs.date) {
     ejs.date = {
@@ -31,7 +30,7 @@ if (!ejs.date) {
                 }
 
                 var result = format;
-                var Week = ['ÈÕ', 'Ò»', '¶ş', 'Èı', 'ËÄ', 'Îå', 'Áù'];
+                var Week = ['æ—¥', 'ä¸€', 'äºŒ', 'ä¸‰', 'å››', 'äº”', 'å…­'];
 
                 var fullYear = date.getFullYear();
                 var year = date.getYear();
@@ -83,19 +82,19 @@ if (!ejs.date) {
             date2 = ejs.date.getDate(date2);
             var diff = 0;
             var interval = 86400000;
-            if (mode == "s") {  //Ãë
+            if (mode == "s") {  //ç§’
                 diff = (date2 - date1) / 1000;
-            } else if (mode == "n") {   //·ÖÖÓ
+            } else if (mode == "n") {   //åˆ†é’Ÿ
                 diff = (date2 - date1) / 60000;
-            } else if (mode == "h") {   //Ğ¡Ê±
+            } else if (mode == "h") {   //å°æ—¶
                 diff = (date2 - date1) / 3600000;
-            } else if (mode == "d") {   //Ìì
+            } else if (mode == "d") {   //å¤©
                 diff = (date2 - date1) / 86400000;
-            } else if (mode == "w") {   //ÖÜ
+            } else if (mode == "w") {   //å‘¨
                 diff = (date2 - date1) / (86400000 * 7);
-            } else if (mode == "m") {   //ÔÂ
+            } else if (mode == "m") {   //æœˆ
                 diff = (date2.getMonth() + 1) + ((date2.getFullYear() - date1.getFullYear()) * 12) - (date1.getMonth() + 1);
-            } else if (mode == "y") {   //Äê
+            } else if (mode == "y") {   //å¹´
                 diff = date2.getFullYear() - date1.getFullYear();
             }
             return Math.abs(diff);

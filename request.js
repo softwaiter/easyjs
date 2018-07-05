@@ -1,7 +1,7 @@
-﻿/*
+/*
  * Request Class
  *
- * Required: core.js / browser.js / string.js
+ * Required: core.js, browser.js, string.js
 */
 if (!ejs.request) {
     ejs.request = {

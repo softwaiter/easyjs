@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Encrypt Class
  */
 if (!ejs.encrypt) {
